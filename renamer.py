@@ -1,10 +1,9 @@
 import os
 import random
+from settings import *
 
-dst_dir = 'alphabet'
-files = os.listdir(dst_dir)
+files = os.listdir(ALPHABET_DIR)
 random.shuffle(files)
-abc = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-assert len(files) == len(abc)
-for i, letter in enumerate(abc):
-    os.rename(f'{dst_dir}\\{files[i]}', f'{dst_dir}\\{letter}.jpg')
+assert len(files) == len(ABC)
+for i, letter in enumerate(ABC):
+    os.rename(f'{ALPHABET_DIR}\\{files[i]}', f'{ALPHABET_DIR}\\{letter}.jpg')
